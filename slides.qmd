@@ -1,0 +1,272 @@
+---
+title: "Open Source, Demystified"
+subtitle: "How Anyone Can Start Contributing"
+author: "Ganesh Kathiresan"
+date: "2026"
+format:
+  revealjs:
+    theme: moon
+    slide-number: true
+    transition: slide
+    footer: "SciPy India 2026"
+    hash-type: number
+---
+
+## Why This Talk?
+
+Ever wanted to contribute to open source but held back?
+
+. . .
+
+- "I'm not experienced enough"
+- "The codebase is way too big"
+- "I wouldn't even know where to start"
+
+. . .
+
+> I felt the same way. Turns out, you don't need to be ready — you just need to begin.
+
+---
+
+## My Journey {visibility="uncounted"}
+
+```{mermaid}
+%%{init: {'theme': 'dark', 'themeVariables': {'fontSize': '14px'}}}%%
+timeline
+    title From First PR to Maintainer
+    section 2019
+        Dec 2019 : First OS contribution
+                  : Garbage Collector — clang support
+```
+
+---
+
+## My Journey {visibility="uncounted"}
+
+```{mermaid}
+%%{init: {'theme': 'dark', 'themeVariables': {'fontSize': '14px'}}}%%
+timeline
+    title From First PR to Maintainer
+    section 2019
+        Dec 2019 : First OS contribution
+                  : Garbage Collector — clang support
+    section 2020
+        Feb 2020 : First NumPy contribution
+```
+
+---
+
+## My Journey {visibility="uncounted"}
+
+```{mermaid}
+%%{init: {'theme': 'dark', 'themeVariables': {'fontSize': '14px'}}}%%
+timeline
+    title From First PR to Maintainer
+    section 2019
+        Dec 2019 : First OS contribution
+                  : Garbage Collector — clang support
+    section 2020
+        Feb 2020 : First NumPy contribution
+        Dec 2020 : First big contribution
+                  : ~50% speed boost in integer division
+```
+
+---
+
+## My Journey {visibility="uncounted"}
+
+```{mermaid}
+%%{init: {'theme': 'dark', 'themeVariables': {'fontSize': '14px'}}}%%
+timeline
+    title From First PR to Maintainer
+    section 2019
+        Dec 2019 : First OS contribution
+                  : Garbage Collector — clang support
+    section 2020
+        Feb 2020 : First NumPy contribution
+        Dec 2020 : First big contribution
+                  : ~50% speed boost in integer division
+    section 2021
+        Apr 2021 : Biggest PR merged
+                  : ~80%+ speed boost in division
+```
+
+---
+
+## My Journey {visibility="uncounted"}
+
+```{mermaid}
+%%{init: {'theme': 'dark', 'themeVariables': {'fontSize': '14px'}}}%%
+timeline
+    title From First PR to Maintainer
+    section 2019
+        Dec 2019 : First OS contribution
+                  : Garbage Collector — clang support
+    section 2020
+        Feb 2020 : First NumPy contribution
+        Dec 2020 : First big contribution
+                  : ~50% speed boost in integer division
+    section 2021
+        Apr 2021 : Biggest PR merged
+                  : ~80%+ speed boost in division
+        Jul 2021 : Became a NumPy Maintainer
+```
+
+---
+
+## My Journey
+
+```{mermaid}
+%%{init: {'theme': 'dark', 'themeVariables': {'fontSize': '14px'}}}%%
+timeline
+    title From First PR to Maintainer
+    section 2019
+        Dec 2019 : First OS contribution
+                  : Garbage Collector — clang support
+    section 2020
+        Feb 2020 : First NumPy contribution
+        Dec 2020 : First big contribution
+                  : ~50% speed boost in integer division
+    section 2021
+        Apr 2021 : Biggest PR merged
+                  : ~80%+ speed boost in division
+        Jul 2021 : Became a NumPy Maintainer
+        Jul–Nov 2021 : First full feature
+                      : bit_count
+```
+
+---
+
+## Common Misconceptions
+
+| Myth | Reality |
+|------|---------|
+| Only for experts | Beginners are welcome everywhere |
+| Need to know the whole codebase | You can start with one file |
+| Requires huge time commitment | Even 30 minutes helps |
+| Only code counts | Docs, tests, triage all matter |
+
+---
+
+## What Counts as a Contribution?
+
+- 🐛 Bug reports
+- 📝 Documentation fixes
+- 🧪 Adding or improving tests
+- 🔧 Small bug fixes
+- 💬 Answering questions in issues
+- 📦 Packaging and CI improvements
+
+---
+
+## Finding the Right Project
+
+Start with tools you already use.
+
+- Check their GitHub for `good first issue` or `help wanted` labels
+- Read the `CONTRIBUTING.md`
+- Look at recent activity — is the project alive?
+- Join their communication channel (Discord, Slack, mailing list)
+
+---
+
+## Navigating a New Repository
+
+```text
+├── src/            # Source code
+├── tests/          # Test suite
+├── docs/           # Documentation
+├── CONTRIBUTING.md # How to contribute
+├── README.md       # Project overview
+└── setup.py        # Build config
+```
+
+Start with `README.md` → `CONTRIBUTING.md` → issue tracker.
+
+---
+
+## Working with Maintainers
+
+::: {.incremental}
+- Read the contribution guidelines first
+- Be respectful and patient
+- Ask before starting large changes
+- Keep PRs small and focused
+- Respond to review feedback
+:::
+
+. . .
+
+::: {.incremental}
+- Open Source is slow
+  - But that's a good thing!
+:::
+
+---
+
+## What You Gain
+
+::: {.incremental}
+- 🔍 Better debugging and code-reading skills
+- �️ Exposure to production-qualitmy engineering
+- 🌍 Collaboration across global communities
+- 📋 A visible portfolio of real work
+- 🚀 Career growth through demonstrated initiative
+:::
+
+---
+
+## Staying Consistent
+
+- Start small — don't aim for heroic PRs
+- Set a rhythm (spend few mins every day)
+  - Most days I just go over 10+ issues looking for gaps
+- Celebrate small wins
+- It's okay to take breaks
+
+---
+
+## Practical Tips
+
+- Use `git log` and `git blame` to understand code history
+- Run the test suite locally before submitting
+- Write clear commit messages
+- Reference the issue number in your PR
+- Don't be afraid to ask questions
+
+---
+
+## Open Source is Not...
+
+- ❌ An obligation
+- ❌ Free labor
+- ❌ Only for "rockstar" developers
+
+## Open Source IS...
+
+- ✅ A learning ecosystem
+- ✅ A community
+- ✅ A career accelerator
+
+---
+
+## Key Takeaways
+
+- Open source is approachable — start before you feel ready
+- Small contributions compound over time
+- Communication and respect go a long way
+- It strengthens real engineering skills
+- Your contributions build a visible professional portfolio
+
+---
+
+## Thank You {.center}
+
+::: {.incremental}
+- > Your first contribution to open source will be the hardest but best experience as a developer. Thousands of people have contributed their knowledge to develop some of the best projects that have progressed mankind to where we are today.
+- Are you ready to make your first contribution?
+:::
+
+---
+
+## Questions?
