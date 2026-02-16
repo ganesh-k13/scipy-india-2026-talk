@@ -12,7 +12,7 @@
   <meta name="generator" content="quarto-1.8.27">
 
   <meta name="author" content="Ganesh Kathiresan">
-  <meta name="dcterms.date" content="2026-01-01">
+  <meta name="dcterms.date" content="2026-02-21">
   <title>Open Source, Demystified</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -146,7 +146,7 @@ Ganesh Kathiresan
 </div>
 </div>
 
-  <p class="date">2026-01-01</p>
+  <p class="date">2026-02-21</p>
 </section>
 <section class="slide level2">
 <h2>Why This Talk?</h2>
@@ -175,18 +175,14 @@ Ganesh Kathiresan
 timeline
     title From First PR to Maintainer
     section 2019
-        Dec 2019 : First OS contribution
-                  : Garbage Collector — clang support
+        Dec : First OS contribution | Garbage Collector — clang support
     section 2020
-        Feb 2020 : First NumPy contribution
-        Dec 2020 : First big contribution
-                  : ~50% speed boost in integer division
+        Feb : First NumPy contribution
+        Dec : First big contribution | ~50% speed boost in integer division
     section 2021
-        Apr 2021 : Biggest PR merged
-                  : ~80%+ speed boost in division
-        Jul 2021 : Became a NumPy Maintainer
-        Jul–Nov 2021 : First full feature
-                      : bit_count
+        Apr : Biggest PR merged | ~80%+ speed boost in division
+        Jul : Became a NumPy Maintainer
+        Nov : First full feature | bit_count
 </pre>
 </div>
 <p></p></figure><p></p>
@@ -207,10 +203,8 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiaW1wb3J0IG51bXB5IGFzIG5w
 <p><a href="https://github.com/numpy/numpy/pull/21468">PR Link</a></p>
 <div class="{incremental}">
 <ul>
-<li>Found this while working on SIMD enhancements</li>
 <li>Solved a real pain point on identifying how NumPy was built and not just what it’s running</li>
 <li>Today it’s used in every issue creation template in NumPy</li>
-<li>Still working on enhancing this to different modes</li>
 </ul>
 </div>
 <div>
@@ -235,9 +229,8 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiaW1wb3J0IG51bXB5IGFzIG5w
 <div class="{incremental}">
 <ul>
 <li>Every integer division flow in NumPy goes through <a href="https://github.com/numpy/numpy/pull/18075">this</a> change</li>
-<li>Required understanding SIMD dispatch and collaborating with two other contributors</li>
-<li>Took over 6 months of effort to achieve over 80% speed improvements</li>
-<li>Since this change landed before the AI boom, it collectively, along with other SIMD changes, reduced the carbon footprint of Python on LLMs</li>
+<li>Over 6 months of effort yielded 80%+ speed improvements</li>
+<li>Landing before the AI boom, this change, along with other SIMD optimizations, helped reduce the carbon footprint of Python-based LLM workloads</li>
 </ul>
 </div>
 </section>
@@ -254,13 +247,12 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiaW1wb3J0IG51bXB5IGFzIG5w
 <p><a href="https://github.com/numpy/numpy/pull/21429">PR Link</a></p>
 <ul>
 <li>Counts the number of 1-bits in the absolute value of the input</li>
-<li>Implement a recent <a href="https://graphics.stanford.edu/~seander/bithacks.html#CountBitsSetParallel">paper</a> with just 12 CPU cycles</li>
-<li>But the paper (and Core Python) only works for 64 bits. Had to reearch and do the math to get it working for 8, 32 and 128 bits.</li>
-<li>Took over 2+ years to get it working end-to-end for scalars and vectors</li>
+<li>Based on a <a href="https://graphics.stanford.edu/~seander/bithacks.html#CountBitsSetParallel">paper</a> that runs in just 12 CPU cycles, though it took 2+ years to get merged</li>
+<li>The paper and CPython only support 64-bit inputs, so additional work was needed to extend it to 8, 32, and 128 bits</li>
 </ul>
 </section>
 <section class="slide level2">
-<h2>Not everything works 🥲 - <code>float.hex/from_hex</code></h2>
+<h2>Not everything works - <code>float.hex/from_hex</code></h2>
 <div>
 <div id="pyodide-5" class="exercise-cell">
 
@@ -271,19 +263,19 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiaW1wb3J0IG51bXB5IGFzIG5w
 </div>
 <p><a href="https://github.com/numpy/numpy/pull/20083">PR Link</a></p>
 <ul>
-<li>Worked on it for 4 years</li>
-<li>As the change is massive with not much upside, it’s still not merged</li>
+<li>This change is massive with not much upside, it’s still under progress for the past 4 years</li>
 <li>Lessons Learned: Look for value in the community before working on something</li>
 </ul>
 </section>
 <section class="slide level2">
 <h2>Working with Maintainers</h2>
 <ul>
-<li class="fragment">Read the contribution guidelines first</li>
-<li class="fragment">Be respectful and patient</li>
-<li class="fragment">Ask before starting large changes</li>
-<li class="fragment">Keep PRs small and focused</li>
-<li class="fragment">Respond to review feedback</li>
+<li class="fragment">Join Slack channels and mailing lists to stay up to date with communications
+<ul>
+<li class="fragment">Ask questions on small, well-researched topics in Slack</li>
+</ul></li>
+<li class="fragment">Attend open community calls or newcomer hours to connect with maintainers</li>
+<li class="fragment">Address all review comments before requesting another review</li>
 </ul>
 <div class="fragment">
 <ul>
@@ -295,25 +287,35 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiaW1wb3J0IG51bXB5IGFzIG5w
 </div>
 </section>
 <section class="slide level2">
-<h2>Staying Consistent</h2>
+<h2>Usage of AI</h2>
+<p>AI can be used for the following:</p>
 <ul>
-<li>Start small — don’t aim for heroic PRs</li>
-<li>Set a rhythm (spend few mins every day)
-<ul>
-<li>Most days I just go over 10+ issues looking for gaps</li>
-</ul></li>
-<li>Celebrate small wins</li>
-<li>It’s okay to take breaks</li>
+<li class="fragment">Fill in boilerplate code</li>
+<li class="fragment">Deep dive into the code base or specific modules</li>
+<li class="fragment">Refactor UT to get more coverage</li>
 </ul>
+<div class="fragment">
+<ul>
+<li class="fragment">AI is a useful tool!
+<ul>
+<li class="fragment">But use it with caution</li>
+<li class="fragment">Don’t add to the maintainers burden</li>
+</ul></li>
+</ul>
+</div>
 </section>
 <section class="slide level2">
 <h2>Practical Tips</h2>
 <ul>
-<li>Use <code>git log</code> and <code>git blame</code> to understand code history</li>
+<li>Start small — don’t aim for heroic PRs</li>
 <li>Run the test suite locally before submitting</li>
-<li>Write clear commit messages</li>
+<li>Set a rhythm (spend few mins every day)
+<ul>
+<li>Most days I just go over 10+ issues looking for gaps</li>
+</ul></li>
 <li>Reference the issue number in your PR</li>
-<li>Don’t be afraid to ask questions</li>
+<li>It’s okay to take breaks</li>
+<li>Celebrate small wins!</li>
 </ul>
 </section>
 <section class="slide level2">

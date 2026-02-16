@@ -2,7 +2,7 @@
 title: "Open Source, Demystified"
 subtitle: "How Anyone Can Start Contributing"
 author: "Ganesh Kathiresan"
-date: "2026"
+date: "2026-02-21"
 format:
   live-revealjs:
     theme: moon
@@ -37,18 +37,14 @@ Ever wanted to contribute to open source but held back?
 timeline
     title From First PR to Maintainer
     section 2019
-        Dec 2019 : First OS contribution
-                  : Garbage Collector — clang support
+        Dec : First OS contribution | Garbage Collector — clang support
     section 2020
-        Feb 2020 : First NumPy contribution
-        Dec 2020 : First big contribution
-                  : ~50% speed boost in integer division
+        Feb : First NumPy contribution
+        Dec : First big contribution | ~50% speed boost in integer division
     section 2021
-        Apr 2021 : Biggest PR merged
-                  : ~80%+ speed boost in division
-        Jul 2021 : Became a NumPy Maintainer
-        Jul–Nov 2021 : First full feature
-                      : bit_count
+        Apr : Biggest PR merged | ~80%+ speed boost in division
+        Jul : Became a NumPy Maintainer
+        Nov : First full feature | bit_count
 ```
 
 ---
@@ -63,10 +59,8 @@ np.show_runtime()
 [PR Link](https://github.com/numpy/numpy/pull/21468)
 
 :::{incremental}
-- Found this while working on SIMD enhancements
 - Solved a real pain point on identifying how NumPy was built and not just what it's running
 - Today it's used in every issue creation template in NumPy
-- Still working on enhancing this to different modes
 :::
 
 
@@ -86,9 +80,8 @@ np.floor_divide([1., 2., 3., 4.], 2.5), np.array([1., 2., 3., 4.]) // 2.5, np.fl
 
 :::{incremental}
 - Every integer division flow in NumPy goes through [this](https://github.com/numpy/numpy/pull/18075) change
-- Required understanding SIMD dispatch and collaborating with two other contributors
-- Took over 6 months of effort to achieve over 80% speed improvements
-- Since this change landed before the AI boom, it collectively, along with other SIMD changes, reduced the carbon footprint of Python on LLMs
+- Over 6 months of effort yielded 80%+ speed improvements
+- Landing before the AI boom, this change, along with other SIMD optimizations, helped reduce the carbon footprint of Python-based LLM workloads
 :::
 
 ---
@@ -103,13 +96,12 @@ np.bitwise_count(1023), np.bitwise_count([2**i - 1 for i in range(16)])
 [PR Link](https://github.com/numpy/numpy/pull/21429)
 
 - Counts the number of 1-bits in the absolute value of the input
-- Implement a recent [paper](https://graphics.stanford.edu/~seander/bithacks.html#CountBitsSetParallel) with just 12 CPU cycles
-- But the paper (and Core Python) only works for 64 bits. Had to reearch and do the math to get it working for 8, 32 and 128 bits.
-- Took over 2+ years to get it working end-to-end for scalars and vectors
+- Based on a [paper](https://graphics.stanford.edu/~seander/bithacks.html#CountBitsSetParallel) that runs in just 12 CPU cycles, though it took 2+ years to get merged
+- The paper and CPython only support 64-bit inputs, so additional work was needed to extend it to 8, 32, and 128 bits
 
 ---
 
-## Not everything works 🥲 - ``float.hex/from_hex``
+## Not everything works - ``float.hex/from_hex``
 
 ```{pyodide}
 import numpy as np
@@ -118,8 +110,7 @@ np.hex(1.2)
 
 [PR Link](https://github.com/numpy/numpy/pull/20083)
 
-- Worked on it for 4 years
-- As the change is massive with not much upside, it's still not merged
+- This change is massive with not much upside, it's still under progress for the past 4 years
 - Lessons Learned: Look for value in the community before working on something
 
 ---
@@ -127,11 +118,10 @@ np.hex(1.2)
 ## Working with Maintainers
 
 ::: {.incremental}
-- Read the contribution guidelines first
-- Be respectful and patient
-- Ask before starting large changes
-- Keep PRs small and focused
-- Respond to review feedback
+- Join Slack channels and mailing lists to stay up to date with communications
+  - Ask questions on small, well-researched topics in Slack
+- Attend open community calls or newcomer hours to connect with maintainers
+- Address all review comments before requesting another review
 :::
 
 . . .
@@ -143,24 +133,36 @@ np.hex(1.2)
 
 ---
 
+## Usage of AI
 
-## Staying Consistent
+AI can be used for the following:
 
-- Start small — don't aim for heroic PRs
-- Set a rhythm (spend few mins every day)
-  - Most days I just go over 10+ issues looking for gaps
-- Celebrate small wins
-- It's okay to take breaks
+::: {.incremental}
+- Fill in boilerplate code
+- Deep dive into the code base or specific modules
+- Refactor UT to get more coverage
+:::
+
+. . .
+
+::: {.incremental}
+- AI is a useful tool!
+  - But use it with caution
+  - Don't add to the maintainers burden
+:::
 
 ---
 
 ## Practical Tips
 
-- Use `git log` and `git blame` to understand code history
+- Start small — don't aim for heroic PRs
 - Run the test suite locally before submitting
-- Write clear commit messages
+- Set a rhythm (spend few mins every day)
+  - Most days I just go over 10+ issues looking for gaps
 - Reference the issue number in your PR
-- Don't be afraid to ask questions
+- It's okay to take breaks
+- Celebrate small wins!
+
 
 ---
 
