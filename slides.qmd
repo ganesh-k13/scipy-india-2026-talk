@@ -53,12 +53,14 @@ timeline
 
 ---
 
-## Diving into features - show_runtime
+## Diving into features - ``show_runtime``
 
 ```{pyodide}
 import numpy as np
 np.show_runtime()
 ```
+
+[PR Link](https://github.com/numpy/numpy/pull/21468)
 
 :::{incremental}
 - Found this while working on SIMD enhancements
@@ -72,6 +74,53 @@ np.show_runtime()
 import numpy as np
 np.show_config()
 ```
+
+---
+
+## Diving into features - integer division
+
+```{pyodide}
+import numpy as np
+np.floor_divide([1., 2., 3., 4.], 2.5), np.array([1., 2., 3., 4.]) // 2.5, np.float64(128) // np.int32(2)
+```
+
+:::{incremental}
+- Every integer division flow in NumPy goes through [this](https://github.com/numpy/numpy/pull/18075) change
+- Required understanding SIMD dispatch and collaborating with two other contributors
+- Took over 6 months of effort to achieve over 80% speed improvements
+- Since this change landed before the AI boom, it collectively, along with other SIMD changes, reduced the carbon footprint of Python on LLMs
+:::
+
+---
+
+## Diving into features - ``bitwise_count``
+
+```{pyodide}
+import numpy as np
+np.bitwise_count(1023), np.bitwise_count([2**i - 1 for i in range(16)])
+```
+
+[PR Link](https://github.com/numpy/numpy/pull/21429)
+
+- Counts the number of 1-bits in the absolute value of the input
+- Implement a recent [paper](https://graphics.stanford.edu/~seander/bithacks.html#CountBitsSetParallel) with just 12 CPU cycles
+- But the paper (and Core Python) only works for 64 bits. Had to reearch and do the math to get it working for 8, 32 and 128 bits.
+- Took over 2+ years to get it working end-to-end for scalars and vectors
+
+---
+
+## Not everything works 🥲 - ``float.hex/from_hex``
+
+```{pyodide}
+import numpy as np
+np.hex(1.2)
+```
+
+[PR Link](https://github.com/numpy/numpy/pull/20083)
+
+- Worked on it for 4 years
+- As the change is massive with not much upside, it's still not merged
+- Lessons Learned: Look for value in the community before working on something
 
 ---
 
