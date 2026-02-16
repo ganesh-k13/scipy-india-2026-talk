@@ -135,7 +135,7 @@ np.hex(1.2)
 
 ## Usage of AI
 
-AI can be used for the following:
+AI can be used for the following (but not limited to):
 
 ::: {.incremental}
 - Fill in boilerplate code
@@ -145,10 +145,10 @@ AI can be used for the following:
 
 . . .
 
-::: {.incremental}
+::: {.callout-caution}
 - AI is a useful tool!
   - But use it with caution
-  - Don't add to the maintainers burden
+  - Review each line and understand the changes
 :::
 
 ---
