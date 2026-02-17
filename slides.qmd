@@ -113,6 +113,25 @@ np.hex(1.2)
 - This change is massive with not much upside, it's still under progress for the past 4 years
 - Lessons Learned: Look for value in the community before working on something
 
+. . .
+
+> "There are a lot of things that people talk about but don't end up as an issue. If you can pay attention and pick some stuff and use that to open an issue and PR, you are on the next step of the journey." - [CNCF Words of wisdom](https://contribute.cncf.io/contributors/faq/#community-wisdom)
+
+---
+
+## What Counts as a Contribution?
+
+- 🐛 Bug reports
+- 📝 Documentation fixes
+- 🧪 Adding or improving tests
+- 🔧 Small bug fixes
+- 💬 Answering questions in issues
+- 📦 Packaging and CI improvements
+
+. . .
+
+Refer to this awesome guide for more details: [CNCF FAQ](https://contribute.cncf.io/contributors/faq/#community-wisdom)
+
 ---
 
 ## Working with Maintainers
