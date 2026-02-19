@@ -1,11 +1,11 @@
 ---
-title: "Open Source, Demystified"
-subtitle: "How Anyone Can Start Contributing"
+title: "From User to Maintainer: "
+subtitle: "My NumPy Journey"
 author: "Ganesh Kathiresan"
 date: "2026-02-21"
 format:
   live-revealjs:
-    theme: moon
+    theme: sky
     slide-number: true
     transition: slide
     footer: "SciPy India 2026"
@@ -33,7 +33,7 @@ Ever wanted to contribute to open source but held back?
 ## My Journey
 
 ```{mermaid}
-%%{init: {'theme': 'dark', 'themeVariables': {'fontSize': '14px'}}}%%
+%%{init: {'themeVariables': {'fontSize': '14px'}}}%%
 timeline
     title From First PR to Maintainer
     section 2019
@@ -134,6 +134,21 @@ Refer to this awesome guide for more details: [CNCF FAQ](https://contribute.cncf
 
 ---
 
+## Contributing to NumPy
+
+Not sure where to start? [numpy.org/contribute](https://numpy.org/contribute/) lists many ways to help:
+
+:::{.incremental}
+- 💻 Writing code and reviewing pull requests
+- 📚 Developing tutorials, how-to's, and educational materials
+- 🔍 Issue triaging — finding duplicates, adding reproducers, labeling
+- 🌐 Website development and graphic design
+- 🌍 Translating website content into multiple languages
+- 📣 Community coordination, outreach, and fundraising
+:::
+
+---
+
 ## Working with Maintainers
 
 ::: {.incremental}
@@ -141,14 +156,13 @@ Refer to this awesome guide for more details: [CNCF FAQ](https://contribute.cncf
   - Ask questions on small, well-researched topics in Slack
 - Attend open community calls or newcomer hours to connect with maintainers
 - Address all review comments before requesting another review
+- Open Source is slow
+  - But that's a good thing!
 :::
 
 . . .
 
-::: {.incremental}
-- Open Source is slow
-  - But that's a good thing!
-:::
+[Community Calendars](https://scientific-python.org/calendars/)
 
 ---
 
@@ -198,7 +212,7 @@ AI can be used for the following (but not limited to):
 ## Thank You {.center}
 
 ::: {.incremental}
-- > Your first contribution to open source will be the hardest but best experience as a developer. Thousands of people have contributed their knowledge to develop some of the best projects that have progressed mankind to where we are today.
+- > Your first contribution to open source will be the hardest but best experience as a developer. Thousands of people have contributed their knowledge to develop some of the best projects that have progressed humans to where we are today.
 - Are you ready to make your first contribution?
 :::
 
